@@ -1,0 +1,24 @@
+<h1>Qualifications</h1>
+<p ng-show="warning.length" class="warning">
+  {{warning}}
+</p>
+<ul class="qualifications">
+  <li ng-repeat="qualification in qualifications" class="qualification">
+
+    <h2 ng-click="showSubjects = !showSubjects">{{qualification.name}}</h2>
+
+    <ul ng-init="showSubjects = false" ng-show="showSubjects" class="subjects">
+      <li ng-repeat="subject in qualification.subjects" class="subject">
+
+        <h3 style="background-color:{{subject.colour}}">{{subject.title}}</h3>
+
+      </li>
+
+      <li ng-show="!qualification.subjects.length" class="subject no-subjects">
+        This qualification has no subjects
+      </li>
+
+    </ul>
+
+  </li>
+</ul>

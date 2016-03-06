@@ -1,0 +1,27 @@
+{
+  "name": "easy-gojimo",
+  "authors": [
+    "Patrick <patrick.c.gleeson@googlemail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "^3.3.6",
+    "angular-http-etag": "^1.1.2",
+    "angular-route": "^1.5.0",
+    "angular-mocks": "~1.5.0"
+  }
+}
