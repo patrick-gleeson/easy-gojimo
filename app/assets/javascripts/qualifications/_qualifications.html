@@ -1,24 +1,32 @@
-<h1>Qualifications</h1>
+
+<h2>Qualifications</h2>
 <p ng-show="warning.length" class="warning">
   {{warning}}
 </p>
-<ul class="qualifications">
-  <li ng-repeat="qualification in qualifications" class="qualification">
+<div id="spinner" ng-show="!loaded"></div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <ul class="qualifications">
+      <li ng-repeat="qualification in qualifications" class="qualification">
 
-    <h2 ng-click="showSubjects = !showSubjects">{{qualification.name}}</h2>
+        <h3 class="qualification-name" ng-class="{toggled: showSubjects}" ng-click="showSubjects = !showSubjects">
+          {{qualification.name}}
+        </h3>
 
-    <ul ng-init="showSubjects = false" ng-show="showSubjects" class="subjects">
-      <li ng-repeat="subject in qualification.subjects" class="subject">
+        <ul ng-init="showSubjects = false" ng-show="showSubjects" class="subjects">
+          <li ng-repeat="subject in qualification.subjects" class="subject">
 
-        <h3 style="background-color:{{subject.colour}}">{{subject.title}}</h3>
+            <h4 style="background-color:{{subject.colour}}">{{subject.title}}</h4>
+
+          </li>
+
+          <li ng-show="!qualification.subjects.length" class="subject no-subjects">
+            This qualification has no subjects
+          </li>
+
+        </ul>
 
       </li>
-
-      <li ng-show="!qualification.subjects.length" class="subject no-subjects">
-        This qualification has no subjects
-      </li>
-
     </ul>
-
-  </li>
-</ul>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+$main-colour: #86c640;
+$dark-colour: #46a620;
+$background-colour: #FCFAFC;
+
+body {
+  background-color: $main-colour;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 20px solid $dark-colour;
+
+  h1 {
+    display: inline-block;
+    color: $main-colour;
+  }
+
+  #logo {
+    height: 50px;
+    width: auto;
+    float:left;
+    margin: 20px 40px 5px 20px;
+  }
+}
+
+h1, h2 {
+  font-family: 'Nunito', sans-serif;
+}
+
+.body-container {
+  background-color: $background-colour;
+  border-radius: 5px;
+}
+
+#spinner {
+  background-image: image-url("spinner.gif");
+  background-size: contain;
+  height:60px;
+  width:60px;
+  margin:auto;
+}
+
+h2 {
+  border-bottom: 1px solid $dark-colour;
+  color: $dark-colour;
+}
+
+li {
+  list-style-type:none;
+}
+
+.qualifications {
+  padding-left:0px;
+  .qualification {
+    margin: 10px 0;
+    border-radius: 3px;
+    border: 1px solid $dark-colour;
+    position: relative;
+
+    h3 {
+      margin:0;
+      cursor: pointer;
+      background-color: $dark-colour;
+      color: white;
+      padding: 10px;
+    }
+  }
+}
+
+.subjects {
+  padding:10px;
+  line-height: 20px;
+  opacity: 1;
+  transition:height linear 0.5s, opacity linear 0.5s;
+
+  .subject h4 {
+    padding: 3px;
+    border-radius: 3px;
+  }
+
+  &.ng-hide {
+    line-height: 0;
+    opacity: 0;
+    display:block !important;
+    padding:0;
+    height:0;
+    transition: all linear 0s;
+
+    .subject {
+      display:none;
+    }
+  }
+}
+
+.qualification-name:after {
+  content: "";
+    display: block;
+    background-image: image-url("plus.png");
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    position:absolute;
+    top: 10px;
+    right: 5px;
+}
+
+.qualification-name.toggled:after {
+  background-image: image-url("minus.png");
+}

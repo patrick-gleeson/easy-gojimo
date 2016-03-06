@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Qualifications</title>
+    <link rel="shortcut icon" type="image/x-icon" href="<%=image_path('favicon.ico') %>"/>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -11,7 +12,19 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div ng-view></div>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <%= image_tag('logo.png', id: 'logo') %>
+          <h1 href="#">Gojimo!</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container body-container">
+      <div ng-view></div>
+    </div>
+
 
   </body>
 </html>

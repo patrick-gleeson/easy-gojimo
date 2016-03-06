@@ -13,3 +13,5 @@
  *= require bootstrap/dist/css/bootstrap
  *= require_tree .
  */
+
+ @import url(https://fonts.googleapis.com/css?family=Nunito|Josefin+Sans);

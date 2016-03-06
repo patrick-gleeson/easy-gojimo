@@ -19,7 +19,7 @@ RSpec.feature 'Qualification list', type: :feature do
   end
 
   scenario 'has a nice title', js: true do
-    expect(page).to have_css('h1', text: 'Qualifications')
+    expect(page).to have_css('h2', text: 'Qualifications')
   end
 
   scenario 'shows some qualifications', js: true do
@@ -30,7 +30,7 @@ RSpec.feature 'Qualification list', type: :feature do
     expect(page).not_to have_text('Mathematics')
     first('.qualification').click
     expect(page).to have_text('Mathematics')
-    expect(first('.qualification').all('h3').last['style'])
+    expect(first('.qualification').all('h4').last['style'])
       .to eq 'background-color:#FFAAAA'
   end
 
